@@ -2,8 +2,10 @@
   <div class="header">
     <div class="header_l">
       <a href="javascript:;" class="logoLink"
-        ><img src="./logo.png" alt="logo" />Vue Project</a
+        ><i class="el-icon-video-camera-solid"></i>摄影管理系统</a
       >
+
+      <!-- <img src="./logo.png" alt="logo" /> -->
     </div>
     <div class="header_r">
       <div class="headr_d1">

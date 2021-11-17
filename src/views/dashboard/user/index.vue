@@ -1,43 +1,62 @@
 <template>
-  <div class="user animateClass">
-    <p class="user_p0">Ordinary Users</p>
-    <p class="user_p1">users's Dashboard</p>
-    <div class="user_img" ref="aniEnd">
-      <img src="https://cn.vuejs.org/images/logo.png" alt="vue" />
+  <div class="user_hone">
+    <div class="banner">
+      <img
+        src="	https://cdn9-banquan.ituchong.com/weili/l/918172946039570442.webp"
+        alt=""
+      />
+      <div class="back"></div>
+      <span class="banner_text">Gallery</span>
+      <span class="banner_text2">欢迎进入您的管理系统</span>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
-</script>
-<style lang="scss" scoped>
-.animateClass {
-  .user_p0,
-  .user_p1,
-  .user_img {
-    animation: bounceInUp 1s;
+export default {
+  data() {
+    return {}
   }
 }
-.user {
-  overflow: hidden;
-  .user_p0 {
-    font-size: 36px;
-    text-align: center;
-    padding-top: 55px;
-    animation-fill-mode: forwards;
-  }
-  .user_p1 {
-    font-size: 20px;
-    text-align: center;
-    animation-delay: 0.1s;
-    animation-fill-mode: forwards;
-  }
-  .user_img {
-    text-align: center;
-    margin-top: 46px;
-    animation-delay: 0.1s;
-    animation-fill-mode: forwards;
-  }
+</script>
+<style lang="scss" scoped>
+* {
+  margin: 0;
+  padding: 0;
+}
+.banner img {
+  position: relative;
+  top: -35px;
+  left: -30px;
+  width: 107%;
+  height: 872px;
+}
+.banner_text {
+  font-size: 18vh;
+  color: #fff;
+  opacity: 0.7;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  right: 3%;
+  top: 17%;
+}
+.banner_text2 {
+  position: absolute;
+  bottom: 99px;
+  color: #fff;
+  opacity: 0.7;
+  right: 5%;
+  font-size: 8vh;
+  width: 27%;
+}
+.back {
+  background: #5ca9ba;
+  width: 492px;
+  height: 122px;
+  position: absolute;
+  bottom: 47px;
+  left: 200px;
+  z-index: 10000;
 }
 </style>

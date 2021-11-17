@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       imgdata: [
-        'https://img0.baidu.com/it/u=4022875593,605878568&fm=26&fmt=auto',
+        'https://1x.com/assets/img/splash06.jpg',
         'https://img0.baidu.com/it/u=1036995158,3700412359&fm=26&fmt=auto',
         'https://img2.baidu.com/it/u=308860471,1497488519&fm=26&fmt=auto',
         'https://img0.baidu.com/it/u=4251295961,3403932192&fm=26&fmt=auto'

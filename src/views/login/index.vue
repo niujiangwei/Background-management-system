@@ -22,11 +22,16 @@
       <h2 class="loginH2"><strong>Vue</strong> 后台管理系统</h2>
       <div class="loginCon">
         <div class="titleDiv">
-          <h3>Sign up now</h3>
-          <p>Enter your username and password to log on:</p>
+          <p></p>
+          <h3>输入用户名和密码登录</h3>
           <i class="el-icon-key"></i>
         </div>
-        <el-form ref="loginForm" :rules="rules" :model="ruleForm">
+        <el-form
+          ref="loginForm"
+          :rules="rules"
+          :model="ruleForm"
+          class="loginFormStyle"
+        >
           <el-form-item prop="user">
             <el-input
               placeholder="请输入账号"
@@ -56,7 +61,7 @@
 
 <script>
 import SlideVerify from '@/components/SlideVerify'
-import $ from 'jquery'
+// import $ from 'jquery'
 export default {
   data() {
     return {
@@ -108,29 +113,29 @@ export default {
       })
     },
     _login() {
-      $.ajax({
-        type: 'POST',
-        url: 'http://127.0.0.1:3000/login',
-        data: {},
-        dataType: 'json',
-        async: false,
-        success: data => {
-          this.userData = data
-          console.log(this, this.userData, data, 'data')
-        },
-        error: function(data, textStatus, errorThrown) {
-          console.log(data, textStatus, errorThrown, 'error,data')
-        }
-      })
-      this.userData.forEach(item => {
-        if (
-          item.user === this.ruleForm.user &&
-          item.password === this.ruleForm.password
-        ) {
-          console.log('true')
-          this.islogin = true
-        }
-      })
+      // $.ajax({
+      //   type: 'POST',
+      //   url: 'http://127.0.0.1:3000/login',
+      //   data: {},
+      //   dataType: 'json',
+      //   async: false,
+      //   success: data => {
+      //     this.userData = data
+      //     console.log(this, this.userData, data, 'data')
+      //   },
+      //   error: function(data, textStatus, errorThrown) {
+      //     console.log(data, textStatus, errorThrown, 'error,data')
+      //   }
+      // })
+      // this.userData.forEach(item => {
+      //   if (
+      //     item.user === this.ruleForm.user &&
+      //     item.password === this.ruleForm.password
+      //   ) {
+      //     console.log('true')
+      //     this.islogin = true
+      //   }
+      // })
       // const aa = this.userData.indexOf(this.ruleForm)
       console.log(this, 'this')
 
@@ -187,7 +192,7 @@ export default {
 }
 .loginH2 {
   font-size: 38px;
-  color: #fff;
+  color: #7b969f;
   text-align: center;
 }
 .loginCon {
@@ -196,19 +201,22 @@ export default {
   border-radius: 4px;
   .titleDiv {
     padding: 0 28px;
-    background: #fff;
+    background: url(../../assets/pageBg/白色.jpg) no-repeat center center;
     position: relative;
     height: 120px;
     border-radius: 4px 4px 0 0;
+    .el-icon-key {
+      color: #252621;
+    }
     h3 {
       font-size: 22px;
-      color: #555;
+      color: #252621;
       font-weight: initial;
       padding-top: 23px;
     }
     p {
       font-size: 16px;
-      color: #888;
+      color: #252621;
       padding-top: 12px;
     }
     i {
@@ -221,8 +229,9 @@ export default {
   }
   .el-form {
     padding: 25px 25px 30px 25px;
-    background: #eee;
+    background: #fff;
     border-radius: 0 0 4px 4px;
+    background: url(../../assets/pageBg/白色.jpg) no-repeat center center;
   }
 }
 .loginBtn {
