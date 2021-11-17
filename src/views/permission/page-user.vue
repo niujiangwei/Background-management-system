@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- <img src="./img/漂亮.webp" class="btBg" /> -->
+    <!--  -->
     <div id="app" class="box">
       <ul class="tabs clearfix">
         <li v-for="(tab, index) in tabsName" :key="index">
