@@ -95,7 +95,7 @@ export default {
       display: block;
       font-size: 32px;
       margin-bottom: 15px;
-      color: #606266;
+      // color: #606266;
       transition: color 0.15s linear;
       margin-top: 30px;
     }
