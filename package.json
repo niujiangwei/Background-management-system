@@ -19,6 +19,7 @@
     "vue": "^2.6.10",
     "vue-count-to": "^1.0.13",
     "vue-router": "^3.0.3",
+    "vue-waterfall2": "^1.10.1",
     "vuex": "^3.0.1",
     "xlsx": "^0.14.4"
   },
@@ -34,6 +35,8 @@
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "script-loader": "^0.7.2",
+    "stylus": "^0.55.0",
+    "stylus-loader": "^6.2.0",
     "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.6.10"
   }
