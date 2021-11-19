@@ -132,8 +132,8 @@ export const asyncRoutes = [
       {
         path: 'complex-table',
         name: 'ComplexTable',
-        component: () => import('@/views/table/complex-table'),
-        meta: { title: '数据操作' }
+        component: () => import('@/views/table/complex-table')
+        // meta: { title: '数据操作' }
       }
     ]
   },
@@ -175,6 +175,12 @@ export const asyncRoutes = [
         name: 'Carousel',
         component: () => import('@/views/components/carousel'),
         meta: { icon: 'el-icon-lunbo iconfont', title: '婚纱轮播' }
+      },
+      {
+        path: 'adds',
+        name: 'Adds',
+        component: () => import('@/views/components/adds'),
+        meta: { icon: 'el-icon-more-outline', title: '111' }
       }
     ]
   },

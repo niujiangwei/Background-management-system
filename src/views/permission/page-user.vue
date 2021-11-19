@@ -1,38 +1,35 @@
 <template>
-  <div>
-    <!-- <img src="./img/漂亮.webp" class="btBg" /> -->
-    <!--  -->
-    <div id="app" class="box">
-      <ul class="tabs clearfix">
-        <li v-for="(tab, index) in tabsName" :key="index">
-          <a
-            href="#"
-            rel="external nofollow"
-            class="tab-link"
-            @click="tabsSwitch(index)"
-            v-bind:class="{ active: tab.isActive }"
-            >{{ tab.name }}</a
-          >
-        </li>
-      </ul>
-      <div class="cards">
-        <div class="tab-card" style="display: block;">
-          111
-          <ul class="list_ui">
-            <li v-for="(List, index) in list" :key="index">
-              <div class="text">{{ List.title }}</div>
-              <img
-                :src="List.pic"
-                style="width: 100%;height: 100%"
-                class="List_pic"
-              />
-            </li>
-          </ul>
-        </div>
-        <div class="tab-card">222</div>
-        <div class="tab-card">333</div>
-        <div class="tab-card">11</div>
+  <!-- <img src="./img/漂亮.webp" class="btBg" /> -->
+  <div id="app" class="box">
+    <ul class="tabs clearfix">
+      <li v-for="(tab, index) in tabsName" :key="index">
+        <a
+          href="#"
+          rel="external nofollow"
+          class="tab-link"
+          @click="tabsSwitch(index)"
+          v-bind:class="{ active: tab.isActive }"
+          >{{ tab.name }}</a
+        >
+      </li>
+    </ul>
+    <div class="cards">
+      <div class="tab-card" style="display: block;">
+        111
+        <!-- <ul class="list_ui">
+          <li v-for="(List, index) in list" :key="index">
+            <div class="text">{{ List.title }}</div>
+            <img
+              :src="List.pic"
+              style="width: 100%;height: 100%"
+              class="List_pic"
+            />
+          </li>
+        </ul> -->
       </div>
+      <div class="tab-card">222</div>
+      <div class="tab-card">333</div>
+      <div class="tab-card">11</div>
     </div>
   </div>
 </template>
@@ -122,14 +119,11 @@ export default {
   display: none;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
-  width: 200px;
-  height: 200px;
+  width: 800px;
+  height: 800px;
   background: pink;
-  position: absolute;
-  right: 1%;
-  top: 7%;
-  width: 76%;
-  height: 78%;
+  float: left;
+  margin: 36px 100px;
 }
 @-webkit-keyframes fadeEffect {
   from {
@@ -160,5 +154,6 @@ export default {
   zoom: 1;
   width: 200px;
   height: 900px;
+  float: left;
 }
 </style>
