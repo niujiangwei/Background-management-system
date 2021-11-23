@@ -174,13 +174,13 @@ export const asyncRoutes = [
         path: 'carousel',
         name: 'Carousel',
         component: () => import('@/views/components/carousel'),
-        meta: { icon: 'el-icon-lunbo iconfont', title: '婚纱轮播' }
+        meta: { icon: 'el-icon-lunbo iconfont', title: '合集' }
       },
       {
         path: 'adds',
         name: 'Adds',
         component: () => import('@/views/components/adds'),
-        meta: { icon: 'el-icon-more-outline', title: '111' }
+        meta: { icon: 'el-icon-s-promotion', title: '毕业季' }
       }
     ]
   },

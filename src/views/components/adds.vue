@@ -11,8 +11,18 @@
           <h3 class="textH3">{{ item }}</h3>
         </el-carousel-item>
       </el-carousel>
-      <!-- <div class="lalal"></div> -->
-      <!-- <img src="./image/学校1.jpg" alt="" /> -->
+      <div class="min_width">
+        <div class="tiaotiao"></div>
+        <img src="./image/3.jpg" alt="" />
+        <div class="tiaotiao"></div>
+        <img src="./image/2.jpg" alt="" />
+        <div class="tiaotiao"></div>
+        <img src="./image/1.jpg" alt="" />
+        <div class="tiaotiao"></div>
+        <img src="./image/4.jpg" alt="" />
+        <div class="tiaotiao"></div>
+        <img src="./image/5.jpg" alt="" />
+      </div>
     </el-card>
   </div>
 </template>
@@ -22,10 +32,10 @@ export default {
   data() {
     return {
       imgdata: [
-        '	http://localhost:8080/static/img/%E5%AD%A6%E6%A0%A11.078a351b.jpg',
-        'https://img.bj520.com/202111/0a0b5ec4f6.jpg',
-        'https://img.bj520.com/202111/3c2e013605.jpg',
-        'https://img.bj520.com/202111/2ad5a3062b.jpg'
+        'http://localhost:8080/static/img/%E5%AD%A6%E6%A0%A16.ec57f935.jpg',
+        'http://localhost:8080/static/img/%E5%AD%A6%E6%A0%A15.a010c24d.jpg',
+        'http://localhost:8080/static/img/%E5%AD%A6%E6%A0%A14.acdb61f7.jpg',
+        'http://localhost:8080/static/img/%E5%AD%A6%E6%A0%A13.03b6b7d0.jpg'
       ]
     }
   }
@@ -47,7 +57,19 @@ export default {
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
-/* .lalal {
-  background: url(http://localhost:8080/static/img/1.3a9f762e.jpg);
-} */
+.min_width {
+  width: 80%;
+  margin: auto;
+}
+.min_width img {
+  width: 45%;
+  margin: auto;
+  display: inherit;
+}
+.min_width .tiaotiao {
+  width: 45%;
+  height: 50px;
+  background: #999;
+  margin: 20px auto;
+}
 </style>

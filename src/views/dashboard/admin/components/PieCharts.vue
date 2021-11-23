@@ -39,10 +39,21 @@ export default {
           trigger: 'item',
           formatter: '{a} <br/>{b} : {c} ({d}%)'
         },
+        title: {
+          text: '消费人群分布',
+          textStyle: {
+            color: '#909399',
+            fontSize: 14,
+            fontWeight: 400,
+            opacity: 0.6
+          },
+          top: -5,
+          left: 50
+        },
         legend: {
           left: 'center',
           bottom: '10',
-          data: ['Vue', 'js', 'html', 'css', 'webpack', 'node']
+          data: ['95', '90', '00', '80', '85', '75']
         },
         series: [
           {
@@ -52,12 +63,12 @@ export default {
             radius: [15, 120],
             center: ['50%', '42%'],
             data: [
-              { value: 40, name: 'Vue' },
-              { value: 35, name: 'js' },
-              { value: 20, name: 'html' },
-              { value: 10, name: 'css' },
-              { value: 8, name: 'webpack' },
-              { value: 5, name: 'node' }
+              { value: 40, name: '95' },
+              { value: 35, name: '90' },
+              { value: 20, name: '00' },
+              { value: 10, name: '80' },
+              { value: 8, name: '85' },
+              { value: 5, name: '75' }
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600
