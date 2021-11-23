@@ -1,7 +1,7 @@
 <template>
   <div class="dashbord">
     <!-- cardlist -->
-    <el-row class="infoCrads">
+    <!-- <el-row class="infoCrads">
       <el-col :span="6">
         <div class="cardItem">
           <div class="cardItem_txt">
@@ -66,7 +66,7 @@
           </div>
         </div>
       </el-col>
-    </el-row>
+    </el-row> -->
     <!-- end -->
     <!-- lineEcharts -->
     <line-charts class="lCharts" :lineChartData="lineChartData"></line-charts>
@@ -88,7 +88,7 @@
 </template>
 
 <script>
-import CountTo from 'vue-count-to'
+// import CountTo from 'vue-count-to'
 import LineCharts from './components/LineCharts'
 import PieCharts from './components/PieCharts'
 import TableShow from './components/TableShow'
@@ -116,7 +116,7 @@ export default {
     this._getAllData()
   },
   components: {
-    CountTo,
+    // CountTo,
     LineCharts,
     PieCharts,
     TableShow,

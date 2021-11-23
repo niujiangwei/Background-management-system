@@ -16,16 +16,6 @@
     <div class="cards">
       <div class="tab-card" style="display: block;">
         111
-        <!-- <ul class="list_ui">
-          <li v-for="(List, index) in list" :key="index">
-            <div class="text">{{ List.title }}</div>
-            <img
-              :src="List.pic"
-              style="width: 100%;height: 100%"
-              class="List_pic"
-            />
-          </li>
-        </ul> -->
       </div>
       <div class="tab-card">222</div>
       <div class="tab-card">333</div>

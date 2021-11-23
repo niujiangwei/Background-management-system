@@ -55,7 +55,7 @@ export default {
     _setOption(inprice = [], outprice = []) {
       this.mycharts.setOption({
         title: {
-          text: 'Statistics',
+          text: '收入支出统计表',
           left: '16'
         },
         tooltip: {

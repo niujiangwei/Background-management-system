@@ -54,7 +54,7 @@ export default {
     _setOption(y2017, y2018, y2019) {
       this.mycharts.setOption({
         title: {
-          text: 'Yearly Expense',
+          text: '月收入对比',
           left: '16'
         },
         legend: {

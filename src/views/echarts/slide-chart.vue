@@ -45,7 +45,7 @@ export default {
             '/' +
             item.getDate()
         )
-        data.push(Math.floor(Math.random() * (1000 - 500 + 1) + 500))
+        data.push(Math.floor(Math.random() * (10 - 5 + 1) + 50))
       }
       this.chartData.date = date
       this.chartData.price = data
@@ -57,7 +57,7 @@ export default {
     _setOption(chartData) {
       this.mycharts.setOption({
         title: {
-          text: '商品价格变动图',
+          text: '销量统计',
           left: '16'
         },
         tooltip: {
@@ -110,7 +110,7 @@ export default {
         ],
         series: [
           {
-            name: '商品价格',
+            name: '售出数量',
             type: 'line',
             areaStyle: {
               color: '#55a8fd',
