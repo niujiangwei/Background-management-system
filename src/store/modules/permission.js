@@ -12,6 +12,15 @@ const mutations = {
 }
 // 遍历asyncRoutes动态路由
 function forSearchArr(route, roles) {
+  console.log(roles, 'roles', roles.indexOf('Excel'))
+  // 删除一些不想让用户看到的数据
+  if (roles.indexOf('Excel') != -1) {
+    roles.splice(roles.indexOf('Excel'), 1)
+    roles.splice(roles.indexOf('Icons'), 1)
+    roles.splice(roles.indexOf('Table'), 1)
+    roles.splice(roles.indexOf('Echarts'), 1)
+    roles.push('Adds')
+  }
   let arrNew = []
   for (let item of route) {
     let itemNew = { ...item } //解决浅拷贝共享同一内存地址

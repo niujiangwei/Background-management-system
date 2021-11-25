@@ -158,16 +158,16 @@ export default {
           this.refresh()
           this.$message.error(error)
         })
+    },
+    shopTip() {
+      this.notifyObj = this.$notify({
+        title: '提示',
+        message:
+          '目前有两个登陆角色，管理员和普通用户，账号分别为：admin、user,密码都为：123456',
+        duration: 0,
+        iconClass: 'el-icon-s-opportunity'
+      })
     }
-    // shopTip() {
-    //   this.notifyObj = this.$notify({
-    //     title: '提示',
-    //     message:
-    //       '目前有两个登陆角色，管理员和普通用户，账号分别为：admin、user,密码都为：123456',
-    //     duration: 0,
-    //     iconClass: 'el-icon-s-opportunity'
-    //   })
-    // }
   },
   components: {
     SlideVerify
