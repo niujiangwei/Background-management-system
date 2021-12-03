@@ -236,7 +236,10 @@ export default {
 }
 .loginBtn {
   width: 100%;
-  background: #19b9e7;
+  background: #fdeeef;
+  border-radius: 20px;
+  border: 0px;
+  color: #999;
 }
 .slideShadow {
   position: fixed;

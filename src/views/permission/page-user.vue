@@ -15,9 +15,38 @@
     </ul>
     <div class="cards">
       <div class="tab-card" style="display: block;">
-        111
+        <div class="waterfall">
+          <img src="http://placekitten.com/100/100" alt="300*100" />
+          <img src="http://placekitten.com/100/70" alt="300*70" />
+          <img src="http://placekitten.com/100/150" alt="300*150" />
+          <img src="http://placekitten.com/100/250" alt="300*250" />
+          <img src="http://placekitten.com/100/80" alt="300*80" />
+          <img src="http://placekitten.com/100/90" alt="300*90" />
+          <img src="http://placekitten.com/100/120" alt="300*120" />
+          <img src="http://placekitten.com/100/180" alt="300*180" />
+          <img src="http://placekitten.com/100/100" alt="300*100" />
+          <img src="http://placekitten.com/100/70" alt="300*70" />
+          <img src="http://placekitten.com/100/150" alt="300*150" />
+          <img src="http://placekitten.com/100/250" alt="300*250" />
+          <img src="http://placekitten.com/100/80" alt="300*80" />
+          <img src="http://placekitten.com/100/90" alt="300*90" />
+          <img src="http://placekitten.com/100/120" alt="300*120" />
+          <img src="http://placekitten.com/100/180" alt="300*180" />
+          <img src="http://placekitten.com/100/80" alt="300*80" />
+          <img src="http://placekitten.com/100/90" alt="300*90" />
+          <img src="http://placekitten.com/100/120" alt="300*120" />
+          <img src="http://placekitten.com/100/180" alt="300*180" />
+        </div>
       </div>
-      <div class="tab-card">222</div>
+      <div class="tab-card">
+        <div
+          v-for="(item, index) in list"
+          :key="index"
+          style="width:100%;height:100%;"
+        >
+          <img :src="item.pic" alt="" />
+        </div>
+      </div>
       <div class="tab-card">333</div>
       <div class="tab-card">11</div>
     </div>
@@ -25,6 +54,7 @@
 </template>
 
 <script>
+import $ from 'jquery'
 export default {
   data: function() {
     return {
@@ -48,14 +78,9 @@ export default {
       ],
       active: false,
       list: [
-        // {
-        //   title: 'title',
-        //   pic: ''
-        // },
-        // {
-        //   title: 'title',
-        //   pic: ''
-        // }
+        {
+          pic: 'https://t7.baidu.com/it/u=850188563,2773576460&fm=193&f=GIF'
+        }
       ]
     }
   },
@@ -70,6 +95,54 @@ export default {
       this.tabsName[tabIndex].isActive = true
       tabCardCollection[tabIndex].style.display = 'block'
     }
+  },
+  mounted() {
+    var colCount
+    var colHeightArray = []
+    var imgWidth = $('.waterfall img').outerWidth(true)
+    colCount = Math.floor($('.waterfall').width() / imgWidth)
+    for (var i = 0; i < colCount; i++) {
+      colHeightArray[i] = 0
+    }
+    $('.waterfall img').on('load', function() {
+      var minValue = colHeightArray[0]
+      var minIndex = 0
+      for (var i = 0; i < colCount; i++) {
+        if (colHeightArray[i] < minValue) {
+          minValue = colHeightArray[i]
+          minIndex = i
+        }
+      }
+      $(this).css({
+        left: minIndex * imgWidth,
+        top: minValue
+      })
+      colHeightArray[minIndex] += $(this).outerHeight(true)
+    })
+
+    $(window).on('resize', function() {
+      var colCount
+      var colHeightArray = []
+      colCount = Math.floor($('.waterfall').width() / imgWidth)
+      for (var i = 0; i < colCount; i++) {
+        colHeightArray[i] = 0
+      }
+      $('.waterfall img').each(function() {
+        var minValue = colHeightArray[0]
+        var minIndex = 0
+        for (var i = 0; i < colCount; i++) {
+          if (colHeightArray[i] < minValue) {
+            minValue = colHeightArray[i]
+            minIndex = i
+          }
+        }
+        $(this).css({
+          left: minIndex * imgWidth,
+          top: minValue
+        })
+        colHeightArray[minIndex] += $(this).outerHeight(true)
+      })
+    })
   }
 }
 </script>
@@ -104,16 +177,19 @@ export default {
 }
 .cards {
   float: left;
+  width: 60%;
+  height: 100%;
 }
 .cards .tab-card {
   display: none;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
-  width: 800px;
-  height: 800px;
+  width: 100%;
+  height: 100%;
   background: pink;
   float: left;
-  margin: 36px 100px;
+  margin: 5% -9%;
+  position: relative;
 }
 @-webkit-keyframes fadeEffect {
   from {
@@ -142,8 +218,20 @@ export default {
 }
 .clearfix {
   zoom: 1;
-  width: 200px;
+  width: 23%;
   height: 900px;
   float: left;
+}
+.waterfall {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.waterfall img {
+  width: 100px;
+  /* 绝对定位实现瀑布流布局 */
+  position: absolute;
+  margin: 5px;
+  /* 给图片重新排列加上动画效果 */
+  transition: all 0.5s;
 }
 </style>
