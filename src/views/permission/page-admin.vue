@@ -44,15 +44,11 @@
         <el-table-column prop="time" label="下单时间"></el-table-column>
         <el-table-column
           prop="address"
-          label="配送地址"
+          label="拍摄地址"
           width="210"
         ></el-table-column>
         <el-table-column prop="phone" label="联系电话"></el-table-column>
-        <el-table-column
-          prop="name"
-          label="配送员"
-          width="70"
-        ></el-table-column>
+        <el-table-column prop="name" label="顾客" width="70"></el-table-column>
         <el-table-column prop="status" label="状态" width="90">
           <template slot-scope="scope">
             <el-tag :type="scope.row.status | tagClass">{{
@@ -123,7 +119,7 @@
             value-format="yyyy-MM-dd HH:mm:ss"
           ></el-date-picker>
         </el-form-item>
-        <el-form-item label="配送地址" prop="address">
+        <el-form-item label="拍摄地址" prop="address">
           <el-input
             type="text"
             placeholder="请输入地址"
@@ -137,7 +133,7 @@
             v-model="formData.phone"
           ></el-input>
         </el-form-item>
-        <el-form-item label="配送员" prop="name">
+        <el-form-item label="顾客" prop="name">
           <el-input
             type="text"
             placeholder="请输入姓名"
