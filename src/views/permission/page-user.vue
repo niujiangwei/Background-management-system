@@ -44,11 +44,23 @@
           :key="index"
           style="width:100%;height:100%;"
         >
-          <img :src="item.pic" alt="" />
+          <img :src="item.pic" alt="" style="width:100%;" />
         </div>
       </div>
-      <div class="tab-card">333</div>
-      <div class="tab-card">11</div>
+      <div class="tab-card">
+        <img
+          src="	https://img.bj520.com/202112/66d988df0f.jpg"
+          alt=""
+          style="width:100%;"
+        />
+      </div>
+      <div class="tab-card">
+        <img
+          src="	https://t7.baidu.com/it/u=2443491726,2331383820&fm=193&f=GIF"
+          alt=""
+          style="width:100%;"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -60,7 +72,7 @@ export default {
     return {
       tabsName: [
         {
-          name: '校园风',
+          name: '猫咪照',
           isActive: true
         },
         {
@@ -79,7 +91,7 @@ export default {
       active: false,
       list: [
         {
-          pic: 'https://t7.baidu.com/it/u=850188563,2773576460&fm=193&f=GIF'
+          pic: 'https://t7.baidu.com/it/u=3029654684,900514866&fm=193&f=GIF'
         }
       ]
     }
@@ -160,11 +172,10 @@ export default {
   float: left;
   margin-right: 8px;
   list-style: none;
+  width: 54%;
 }
 .tabs .tab-link {
   display: block;
-  width: 200px;
-  height: 49px;
   text-align: center;
   line-height: 49px;
   text-decoration: none;
@@ -186,7 +197,6 @@ export default {
   animation: fadeEffect 1s;
   width: 100%;
   height: 100%;
-  background: pink;
   float: left;
   margin: 5% -9%;
   position: relative;

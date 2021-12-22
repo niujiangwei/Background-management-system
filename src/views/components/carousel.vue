@@ -1,9 +1,6 @@
 <template>
   <div class="carousel">
     <el-card>
-      <p class="pTitle" style="margin-top:30px;">
-        2、卡片切换
-      </p>
       <el-carousel :interval="4000" type="card">
         <el-carousel-item v-for="(item, index) in imgdata" :key="index">
           <img :src="item" style="width: 100%;height: 100%" />

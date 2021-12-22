@@ -144,10 +144,10 @@ export const asyncRoutes = [
     redirect: '/icons/index',
     children: [
       {
-        path: 'index',
-        name: 'Icons-index',
-        component: () => import('@/views/icons'),
-        meta: { title: '婚纱数据库存', icon: 'el-icon-picture-outline' }
+        path: 'adds',
+        name: 'Adds',
+        component: () => import('@/views/components/adds'),
+        meta: { icon: 'el-icon-s-promotion', title: '毕业季' }
       }
     ]
   },
@@ -175,13 +175,13 @@ export const asyncRoutes = [
         name: 'Carousel',
         component: () => import('@/views/components/carousel'),
         meta: { icon: 'el-icon-lunbo iconfont', title: '合集' }
+      },
+      {
+        path: 'index',
+        name: 'Icons-index',
+        component: () => import('@/views/icons'),
+        meta: { title: '婚纱数据库存', icon: 'el-icon-picture-outline' }
       }
-      // {
-      //   path: 'adds',
-      //   name: 'Adds',
-      //   component: () => import('@/views/components/adds'),
-      //   meta: { icon: 'el-icon-s-promotion', title: '毕业季' }
-      // }
     ]
   },
   {
@@ -237,33 +237,32 @@ export const asyncRoutes = [
         meta: { title: '多级表头导出' }
       }
     ]
-  }
-  // {
-  //   path: '/error',
-  //   component: Layout,
-  //   name: 'Error',
-  //   redirect: '/error/404',
-  //   children: [
-  //     {
-  //       path: '404',
-  //       name: 'Page404',
-  //       component: () => import('@/views/error-page/404'),
-  //       meta: { title: '404', icon: 'el-icon-s-release' }
-  //     }
-  //   ]
-  // }
+  },
+  {
+    path: '/error',
+    component: Layout,
+    name: 'Error',
+    redirect: '/error/404',
+    children: [
+      // {
+      //   path: '404',
+      //   name: 'Page404',
+      //   component: () => import('@/views/error-page/404'),
+      //   meta: { title: '404', icon: 'el-icon-s-release' }
+      // }
+    ]
+  },
   // {
   //   path: 'https://github.com/gcddblue/vue-admin-webapp',
   //   name: 'Github',
   //   meta: { icon: 'el-icon-link', title: '项目链接' }
   // },
-  // NavTest,
-  // {
-  //   path: '*',
-  //   name: '*404',
-  //   redirect: '/404',
-  //   hidden: true
-  // }
+  {
+    path: '*',
+    name: '*404',
+    redirect: '/404',
+    hidden: true
+  }
 ]
 const creatRouter = () => {
   return new Router({
